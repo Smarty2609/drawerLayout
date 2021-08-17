@@ -19,10 +19,10 @@ public class MainActivity extends AppCompatActivity {
 
     private TextView textView;
 
-    private static String ip = "http://database2.crvszuq21sn8.us-east-2.rds.amazonaws.com/";
+    private static String ip = "database2.crvszuq21sn8.us-east-2.rds.amazonaws.com";
     private static String port = "1433";
     private static String Classes = "net.sourceforge.jtds.jdbc.Driver";
-    private static String database = "testDatabase";
+    private static String database = "";
     private static String username = "redcandatanode";
     private static String password = "redcanpass";
     private static String url = "jdbc:jtds:sqlserver://"+ip+":"+port+"/"+database;
@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
             Statement statement = null;
             try {
                 statement = connection.createStatement();
-                ResultSet resultSet = statement.executeQuery("Select * from TEST_TABLE;");
+                ResultSet resultSet = statement.executeQuery("Insert into ;");
                 while (resultSet.next()){
                     textView.setText(resultSet.getString(1));
                 }
